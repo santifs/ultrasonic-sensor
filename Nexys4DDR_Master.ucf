@@ -1,0 +1,137 @@
+## This file is a general .ucf for the Nexys4 DDR Rev C board
+## To use it in a project:
+## - uncomment the lines corresponding to used pins
+## - rename the used signals according to the project
+
+## Clock signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";		#Bank = 35, Pin name = #IO_L12P_T1_MRCC_35,					Sch name = clk100mhz
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
+
+
+## Switches
+NET "modo"          LOC=J15 | IOSTANDARD=LVCMOS33; # sw(0)
+#NET "sw<1>"          LOC=L16 | IOSTANDARD=LVCMOS33; # sw(1)
+#NET "sw<2>"          LOC=M13 | IOSTANDARD=LVCMOS33; # sw(2)
+#NET "sw<3>"          LOC=R15 | IOSTANDARD=LVCMOS33; # sw(3)
+#NET "sw<4>"          LOC=R17 | IOSTANDARD=LVCMOS33; # sw(4)
+#NET "sw<5>"          LOC=T18 | IOSTANDARD=LVCMOS33; # sw(5)
+#NET "sw<6>"          LOC=U18 | IOSTANDARD=LVCMOS33; # sw(6)
+#NET "sw<7>"          LOC=R13 | IOSTANDARD=LVCMOS33; # sw(7)
+#NET "sw<8>"          LOC=T8  | IOSTANDARD=LVCMOS33; # sw(8)
+#NET "sw<9>"          LOC=U8  | IOSTANDARD=LVCMOS33; # sw(9)
+#NET "sw<10>"         LOC=R16 | IOSTANDARD=LVCMOS33; # sw(10)
+#NET "sw<11>"         LOC=T13 | IOSTANDARD=LVCMOS33; # sw(11)
+#NET "sw<12>"         LOC=H6  | IOSTANDARD=LVCMOS33; # sw(12)
+#NET "sw<13>"         LOC=U12 | IOSTANDARD=LVCMOS33; # sw(13)
+#NET "sw<14>"         LOC=U11 | IOSTANDARD=LVCMOS33; # sw(14)
+#NET "sw<15>"         LOC=V10 | IOSTANDARD=LVCMOS33; # sw(15)
+
+
+## Buttons
+#NET "cpu_resetn"     LOC=C12 | IOSTANDARD=LVCMOS33; #IO_L3P_T0_DQS_AD1P_15
+
+NET "reset"           LOC=N17 | IOSTANDARD=LVCMOS33; # btnc
+#NET "btnd"           LOC=P18 | IOSTANDARD=LVCMOS33; # btnd
+#NET "btnl"           LOC=P17 | IOSTANDARD=LVCMOS33; # btnl
+NET "mide"           LOC=M17 | IOSTANDARD=LVCMOS33; # btnr
+#NET "btnu"           LOC=M18 | IOSTANDARD=LVCMOS33; # btnu
+
+
+## LEDs
+#NET "distancia<0>"         LOC=H17 | IOSTANDARD=LVCMOS33; # led(0)
+#NET "distancia<1>"         LOC=K15 | IOSTANDARD=LVCMOS33; # led(1)
+#NET "distancia<2>"         LOC=J13 | IOSTANDARD=LVCMOS33; # led(2)
+#NET "distancia<3>"         LOC=N14 | IOSTANDARD=LVCMOS33; # led(3)
+#NET "distancia<4>"         LOC=R18 | IOSTANDARD=LVCMOS33; # led(4)
+#NET "distancia<5>"         LOC=V17 | IOSTANDARD=LVCMOS33; # led(5)
+#NET "distancia<6>"         LOC=U17 | IOSTANDARD=LVCMOS33; # led(6)
+#NET "distancia<7>"         LOC=U16 | IOSTANDARD=LVCMOS33; # led(7)
+#NET "distancia<8>"         LOC=V16 | IOSTANDARD=LVCMOS33; # led(8)
+#NET "distancia<9>"         LOC=T15 | IOSTANDARD=LVCMOS33; # led(9)
+#NET "distancia<10>"        LOC=U14 | IOSTANDARD=LVCMOS33; # led(10)
+#NET "led<11>"        LOC=T16 | IOSTANDARD=LVCMOS33; # led(11)
+#NET "led<12>"        LOC=V15 | IOSTANDARD=LVCMOS33; # led(12)
+#NET "led<13>"        LOC=V14 | IOSTANDARD=LVCMOS33; # led(13)
+#NET "led<14>"        LOC=V12 | IOSTANDARD=LVCMOS33; # led(14)
+#NET "led<15>"        LOC=V11 | IOSTANDARD=LVCMOS33; # led(15)
+
+
+##LEDs_RGB
+#NET "led16_b"        LOC=R12 | IOSTANDARD=LVCMOS33; # led16_b
+NET "data_valid"        LOC=M16 | IOSTANDARD=LVCMOS33; # led16_g
+#NET "led16_r"        LOC=N15 | IOSTANDARD=LVCMOS33; # led16_r
+#NET "led17_b"        LOC=G14 | IOSTANDARD=LVCMOS33; # led17_b
+#NET "led17_g"        LOC=R11 | IOSTANDARD=LVCMOS33; # led17_g
+#NET "led17_r"        LOC=N16 | IOSTANDARD=LVCMOS33; # led17_r
+
+
+## 7 segment display
+NET "ca"             LOC=T10 | IOSTANDARD=LVCMOS33; #IO_L24N_T3_A00_D16_14
+NET "cb"             LOC=R10 | IOSTANDARD=LVCMOS33; #IO_25_14
+NET "cc"             LOC=K16 | IOSTANDARD=LVCMOS33; #IO_25_15
+NET "cd"             LOC=K13 | IOSTANDARD=LVCMOS33; #IO_L17P_T2_A26_15
+NET "ce"             LOC=P15 | IOSTANDARD=LVCMOS33; #IO_L13P_T2_MRCC_14
+NET "cf"             LOC=T11 | IOSTANDARD=LVCMOS33; #IO_L19P_T3_A10_D26_14
+NET "cg"             LOC=L18 | IOSTANDARD=LVCMOS33; #IO_L4P_T0_D04_14
+#NET "dp"             LOC=H15 | IOSTANDARD=LVCMOS33; #IO_L19N_T3_A21_VREF_15
+
+NET "an<0>"          LOC=J17 | IOSTANDARD=LVCMOS33; #IO_L23P_T3_FOE_B_15
+NET "an<1>"          LOC=J18 | IOSTANDARD=LVCMOS33; #IO_L23N_T3_FWE_B_15
+NET "an<2>"          LOC=T9  | IOSTANDARD=LVCMOS33; #IO_L24P_T3_A01_D17_14
+NET "an<3>"          LOC=J14 | IOSTANDARD=LVCMOS33; #IO_L19P_T3_A22_15
+NET "an<4>"          LOC=P14 | IOSTANDARD=LVCMOS33; #IO_L8N_T1_D12_14
+NET "an<5>"          LOC=T14 | IOSTANDARD=LVCMOS33; #IO_L14P_T2_SRCC_14
+NET "an<6>"          LOC=K2  | IOSTANDARD=LVCMOS33; #IO_L23P_T3_35
+NET "an<7>"          LOC=U13 | IOSTANDARD=LVCMOS33; #IO_L23N_T3_A02_D18_14
+
+
+## Pmod Header JA
+#NET "ja<1>"          LOC=C17 | IOSTANDARD=LVCMOS33; # ja(1)
+#NET "ja<2>"          LOC=D18 | IOSTANDARD=LVCMOS33; # ja(2)
+#NET "ja<3>"          LOC=E18 | IOSTANDARD=LVCMOS33; # ja(3)
+NET "alarma"          LOC=G17 | IOSTANDARD=LVCMOS33; # ja(4)
+#NET "ja<7>"          LOC=D17 | IOSTANDARD=LVCMOS33; # ja(7)
+#NET "ja<8>"          LOC=E17 | IOSTANDARD=LVCMOS33; # ja(8)
+#NET "ja<9>"          LOC=F18 | IOSTANDARD=LVCMOS33; # ja(9)
+#NET "ja<10>"         LOC=G18 | IOSTANDARD=LVCMOS33; # ja(10)
+
+## Pmod Header JB
+#NET "jb<1>"          LOC=D14 | IOSTANDARD=LVCMOS33; # jb(1)
+#NET "jb<2>"          LOC=F16 | IOSTANDARD=LVCMOS33; # jb(2)
+#NET "jb<3>"          LOC=G16 | IOSTANDARD=LVCMOS33; # jb(3)
+#NET "jb<4>"          LOC=H14 | IOSTANDARD=LVCMOS33; # jb(4)
+#NET "jb<7>"          LOC=E16 | IOSTANDARD=LVCMOS33; # jb(7)
+#NET "jb<8>"          LOC=F13 | IOSTANDARD=LVCMOS33; # jb(8)
+#NET "jb<9>"          LOC=G13 | IOSTANDARD=LVCMOS33; # jb(9)
+#NET "jb<10>"         LOC=H16 | IOSTANDARD=LVCMOS33; # jb(10)
+
+## Pmod Header JC
+#NET "jc<1>"          LOC=K1 | IOSTANDARD=LVCMOS33; # jc(1)
+#NET "jc<2>"          LOC=F6 | IOSTANDARD=LVCMOS33; # jc(2)
+#NET "jc<3>"          LOC=J2 | IOSTANDARD=LVCMOS33; # jc(3)
+#NET "jc<4>"          LOC=G6 | IOSTANDARD=LVCMOS33; # jc(4)
+#NET "jc<7>"          LOC=E7 | IOSTANDARD=LVCMOS33; # jc(7)
+#NET "jc<8>"          LOC=J3 | IOSTANDARD=LVCMOS33; # jc(8)
+#NET "jc<9>"          LOC=J4 | IOSTANDARD=LVCMOS33; # jc(9)
+#NET "jc<10>"         LOC=E6 | IOSTANDARD=LVCMOS33; # jc(10)
+
+## Pmod Header JD
+#NET "jd<1>"          LOC=H4 | IOSTANDARD=LVCMOS33; # jd(1)
+NET "trigger"          LOC=H1 | IOSTANDARD=LVCMOS33; # jd(2)
+#NET "jd<3>"          LOC=G1 | IOSTANDARD=LVCMOS33; # jd(3)
+NET "echo"          LOC=G3 | IOSTANDARD=LVCMOS33; # jd(4)
+#NET "jd<7>"          LOC=H2 | IOSTANDARD=LVCMOS33; # jd(7)
+#NET "jd<8>"          LOC=G4 | IOSTANDARD=LVCMOS33; # jd(8)
+#NET "jd<9>"          LOC=G2 | IOSTANDARD=LVCMOS33; # jd(9)
+#NET "jd<10>"         LOC=F3 | IOSTANDARD=LVCMOS33; # jd(10)
+
+##Pmod Header JXADC
+#NET "xa_n<1>"        LOC=A14 | IOSTANDARD=LVDS; #IO_L9N_T1_DQS_AD3N_15
+#NET "xa_p<1>"        LOC=A13 | IOSTANDARD=LVDS; #IO_L9P_T1_DQS_AD3P_15
+#NET "xa_n<2>"        LOC=A16 | IOSTANDARD=LVDS; #IO_L8N_T1_AD10N_15
+#NET "xa_p<2>"        LOC=A15 | IOSTANDARD=LVDS; #IO_L8P_T1_AD10P_15
+#NET "xa_n<3>"        LOC=B17 | IOSTANDARD=LVDS; #IO_L7N_T1_AD2N_15
+#NET "xa_p<3>"        LOC=B16 | IOSTANDARD=LVDS; #IO_L7P_T1_AD2P_15
+#NET "xa_n<4>"        LOC=A18 | IOSTANDARD=LVDS; #IO_L10N_T1_AD11N_15
+#NET "xa_p<4>"        LOC=B18 | IOSTANDARD=LVDS; #IO_L10P_T1_AD11P_15
