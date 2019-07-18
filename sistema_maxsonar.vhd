@@ -1,12 +1,12 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company: University of Seville
+-- Engineer: Santiago Fernandez Scagliusi
 -- 
 -- Create Date:    15:50:38 05/27/2019 
--- Design Name: 
+-- Design Name:    Main
 -- Module Name:    sistema_maxsonar - Behavioral 
--- Project Name: 
--- Target Devices: 
+-- Project Name:   Ultrasonic Car Parking Sensor
+-- Target Devices: Nexys 4 DDR FPGA
 -- Tool versions: 
 -- Description: 
 --
